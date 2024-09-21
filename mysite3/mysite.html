@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Дневник с Будильником</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Мой Дневник</h1>
+
+		<div id="currentTime" class="current-time"></div> <!-- Текущее время -->
+
+		<textarea id="entryInput" placeholder="Введите вашу запись здесь..."></textarea>
+		<button id="addEntryButton">Добавить запись</button>
+
+		<div class="alarm-container">
+			<h2>Установить будильник</h2>
+			<input type="time" id="alarmTime" class="alarm-input" />
+			<button id="setAlarmButton">Установить будильник</button>
+		</div>
+
+		<ul id="entriesList"></ul>
+
+		<audio id="alarmSound" src="будильник.mp3" preload="auto"></audio>
+
+		<!-- Модальное окно -->
+		<div id="alarmModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Будильник сработал!</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
